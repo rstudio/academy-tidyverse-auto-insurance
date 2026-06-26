@@ -1,0 +1,49 @@
+---
+title: Auto Insurance Data Dictionary
+output:
+  html_document:
+    theme: cerulean
+    css: https://rsacdn.link/teachthis/css/style.css
+---
+
+## The Auto Insurance Data
+
+This project investigates third-party liability (TPL) auto insurance claims for an unknown insurer in France, using data from the [CASdatasets package](https://dutangc.github.io/CASdatasets/reference/freMTPL.html).
+
+This dictionary includes variable descriptions for the `policies` and `claims` data sets.
+
+### Variables: `policies.csv`
+
+Policy-level data for third-party liability (TPL) claims for an unknown insurer in France. Contains policyholder characteristics along with claim count over a one year period [(Source)](https://cellar.kasa.ai/dataset/fr_tpl2_policies/).
+
+`policy_id` - Policy ID
+
+`num_claims` - Number of claims during exposure period
+
+`exposure` - Exposure (potential for accidents) in car years
+
+`area` - Area code of insured vehicle
+
+`vehicle_power` - Power of the car
+
+`vehicle_age` - Vehicle age in years
+
+`driver_age` - Age of insured driver
+
+`bonus_malus` - Bonus/malus, between 50 and 350: <100 means bonus and >100 means malus. Learn more about bonus-malus systems [here](https://en.wikipedia.org/wiki/Bonus-malus)
+
+`vehicle_brand` - Anonymized categories for the brand of the vehicle
+
+`vehicle_gas` - Gasoline type, either diesel or regular
+
+`density` - Population density of the garage area code in people per km^2
+
+`region` - Policy region in France (1970-2015 classification)
+
+### Variables: `claims.csv`
+
+Claim amounts data for the French Third-Party Liability (Claims) data set [(Source)](https://cellar.kasa.ai/dataset/fr_tpl2_claims/).
+
+`policy_id` - Policy ID
+
+`claim_amount` - Claim amount, in euros

@@ -1,0 +1,111 @@
+---
+title: "Wrangle rows and columns"
+format: html
+---
+
+# Instructions
+
+This week, you learned several more functions from the dplyr package (pronounced DEE-ply-er). These functions help you work with the rows and columns in your data set.
+
+You'll use these skills to recode age as a categorical variable and investigate patterns across age groups.
+
+To learn more about the variables contained in the data set, refer to the data dictionary: https://rsacdn.link/milestones/internal/v2/auto-insurance/assets/auto-insurance_dictionary.html
+
+# Milestone
+
+```{r}
+#| label: setup
+#| include: false
+
+# Load your packages here
+
+```
+
+## Create and select columns
+
+In this milestone you will create a new variable in `policies` that assigns each policy holder to an age group. Then, you'll summarize the data to find the average number of claims per policy in each group.
+
+## Recreation
+
+### Part 1 - Import
+
+Before you begin, you will need to import your data set. Use the code chunk below to read the data from the data file `policies.csv`, which is stored in the `data/` folder in your working directory. Be sure to save the data to an object named `policies`.
+
+```{r}
+#| label: recreation-import
+
+```
+
+### Part 2 - Recode
+
+We would like to first create age group categories.
+
+Your task is to use what you've learned about the dplyr package to transform `policies`. You will need to:
+
+1. Using the `driver_age` column, create a new column called `driver_age_group` that assigns each policy holder to one of the following age groups:
+
+   - "Under 25"
+   - "25-49"
+   - "50-74"
+   - "75 and above"
+
+2. Place the `driver_age_group` column immediately _after_ the `driver_age` column. (*Hint*: Is there an argument you can use within `mutate()`?)
+
+Work in the code chunk below. Save your resulting table as `policies_recode`; we will use it in Part 3.
+
+```{r}
+#| label: recreation-recode
+
+```
+
+### Part 3 - Summarize
+
+Now that you have age represented as a categorical variable, you can summarize the data to find the average number of claims per policy in each age group. Run the code below to see a table.
+
+```{r}
+#| label: recreate-this
+#| message: false
+solution <- readr::read_csv("data/milestone03.csv")
+solution
+```
+
+Your task is to use what you've learned about the dplyr package to transform `policies_recode` into this table. You will need to:
+
+1. Group the data by `driver_age_group`
+2. Calculate the mean number of claims (`num_claims`) for each group, saving the result as `mean_claims`
+3. Arrange the rows in descending order of the mean number of claims
+
+Work in the code chunk below. Save your resulting table as `policies_age`.
+
+```{r}
+#| label: recreation-summarize
+
+```
+
+Run the following code chunk to test whether you have the same answer as the solution:
+
+```{r}
+#| label: compare
+#| eval: false
+waldo::compare(policies_age, solution, tolerance = 1e-4, ignore_attr = c("class", "groups"))
+```
+
+## Extension
+
+Using the code chunk below, investigate a single research question about this data, using the additional data wrangling skills you learned this week. Some ideas:
+
+1. Recode `vehicle_age` into meaningful categories. What patterns do you see based on these categories?
+2. The number of insurance claims seems to be a highly skewed distribution. Try some different approaches to recoding to group or bin this variable in a meaningful way.
+3. Recode `bonus_malus` into a categorical variable, and then investigate patterns in the data based on this new variable. (Refer to the data dictionary for more details.)
+4. [any other research question of interest]
+
+Alternately, working with a data set of your own, complete the following:
+
+1. Read in your data
+2. Create at least one new variable in your data set (using `mutate()` and/or `summarize()`), or use other dplyr functions to alter your data
+3. Use your updated data set to create at least one graph and/or table
+
+```{r}
+#| label: extension
+
+```
