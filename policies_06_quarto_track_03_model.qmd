@@ -13,7 +13,7 @@ For this final milestone, apply what you have learned about data transformation 
 
 For example, you might build a linear regression model that uses vehicle exposure and driver age group to predict total claim amount, and then use the broom package to inspect the model estimates and generate predictions.
 
-To learn more about the variables contained in the data set, refer to the data dictionary: https://rsacdn.link/milestones/internal/v2/auto-insurance/assets/auto-insurance_dictionary.html
+To learn more about the variables contained in the data set, refer to the data dictionary: https://rstudio.github.io/academy-tidyverse-auto-insurance/assets/auto-insurance_dictionary.html
 
 # Milestone
 
