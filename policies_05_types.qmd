@@ -16,6 +16,9 @@ To learn more about the variables contained in the data set, refer to the data d
 ```{r}
 #| label: setup
 #| include: false
+
+# Load your packages here
+
 ```
 
 ## Data types

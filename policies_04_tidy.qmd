@@ -9,7 +9,7 @@ This week you learned about tidying and joining data sets with the tidyr (pronou
 
 Joining data sets can be deceptively tricky. It is important to keep in mind that prepping and inspecting the tables you're working with *before* you do a join is often more important (and takes more time) than doing the join itself.
 
-You'll use some of these skills in the milestone to the right.
+You'll use some of these skills in the milestone below.
 
 To learn more about the variables contained in the data set, refer to the data dictionary: https://rstudio.github.io/academy-tidyverse-auto-insurance/assets/auto-insurance_dictionary.html
 
@@ -99,7 +99,7 @@ Then:
 1. Join the `policies_recode` and `claims_summarized` data sets
 2. Group the joined data by `driver_age_group`
 3. Compute two useful summary measures:
-    - `claim_amount_mean`, mean dollar amount of claims (based on `total_claim_amount`)
+    - `claim_amount_mean`, mean claim amount in euros (based on `total_claim_amount`)
     - `n`, number of observations in each group
 
 Work in the code chunk below. Save the result as `policies_claims_age`.
